@@ -8,10 +8,14 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        popins:  "'Poppins', sans-serif"
+        popins:  "'Poppins', sans-serif",
+        roboto: "'Roboto', sans-serif;"
       }
     },
   },
+  daisyui: {
+    themes: [],
+ },
   plugins: [
     // require('@tailwindcss/forms'),
       require("daisyui")
