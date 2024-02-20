@@ -1,6 +1,8 @@
 import Marquee from "react-fast-marquee";
 import Header from "./Header";
 import NavBar from "./NavBar";
+import LeftNav from "../Shared/LeftNav";
+import RightNav from "../Shared/RightNav";
 
 const Home = () => {
     return (
@@ -17,6 +19,16 @@ const Home = () => {
         </div>
 
         <NavBar/>
+
+        <div className="grid grid-cols-4">
+            <div className="col-span-1 p-10">
+                <LeftNav></LeftNav>
+            </div>
+            <div className="col-span-2 p-10 bg-lime-500">2</div>
+            <div className="col-span-1 p-10 ">
+                <RightNav></RightNav>
+            </div>
+        </div>
 
         </div>
     );
