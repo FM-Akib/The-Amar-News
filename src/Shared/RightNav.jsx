@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const RightNav = () => {
     
     return (
-        <div className="sticky top-12">
+        <div className="sticky top-24">
             {/* login with */}
             <div className="mb-5">
                 <h2 className="text-2xl mb-2">Login with</h2>
