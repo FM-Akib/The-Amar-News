@@ -22,7 +22,7 @@
       "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "3",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -238,7 +238,7 @@
       "_id": "cd2b53655737cc4077542baea9f8f75d",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "2",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -352,7 +352,7 @@
       "_id": "374df11ae3d9b8b9ce21f4dc53f59b85",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "1",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -371,7 +371,7 @@
       "_id": "acb9b6785b62698fc6130db7615965e1",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "3",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -390,7 +390,7 @@
       "_id": "be44c843d61859cc0b87cae85c55f9db",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "1",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -409,7 +409,7 @@
       "_id": "1b03149c50f1bec662062d930bf46489",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "2",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -428,7 +428,7 @@
       "_id": "7f5b80c1cdd4df0111918883eae07349",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "3",
       "rating": { "number": 4.5, "badge": "Excellent" },
@@ -448,7 +448,7 @@
       "_id": "17d266b79d2fcd850cd4d983c3aeb95f",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "7",
       "rating": { "number": 4.2, "badge": "Excellent" },
@@ -467,7 +467,7 @@
       "_id": "61f9ce168f7b15aadecb1d1fc80c72f0",
       "others_info": {
         "is_todays_pick": false,
-        "is_trending": true
+        "is_trending": false
       },
       "category_id": "5",
       "rating": { "number": 4.5, "badge": "Excellent" },
