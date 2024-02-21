@@ -3,8 +3,15 @@ import Header from "./Header";
 import NavBar from "./NavBar";
 import LeftNav from "../Shared/LeftNav";
 import RightNav from "../Shared/RightNav";
+import { useContext } from "react";
+import { NewsContext } from "../components/Newsprovider";
 
 const Home = () => {
+    const {news}=useContext(NewsContext);
+    console.log(news)
+
+
+    
     return (
         <div className="font-popin w-[1400px]  mx-auto">
         <Header/>
