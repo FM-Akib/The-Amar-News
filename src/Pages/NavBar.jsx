@@ -5,7 +5,7 @@ import { AuthContext } from "../Authentication/Authprovider";
 
 const NavBar = () => {
 
-  const {user}=useContext(AuthContext);
+  const {user,logOut}=useContext(AuthContext);
   console.log(user);
 
 
@@ -53,14 +53,22 @@ const NavBar = () => {
 
         <div className="navbar-end">
 
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        {
+          user? <>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
         </div>
-
-
-          <Link to="/"><button className="btn ml-1">Login</button></Link>
+        <button onClick={logOut} className="btn ml-1">Logout</button>
+          </>: 
+          <>
+           <Link to="/login"><button className="btn ml-1 mr-1 bg-emerald-200 border-emerald-300">Signin</button></Link>
+           <Link to="/signup"><button className="btn ml-1 bg-yellow-200 border-yellow-300">Signup</button></Link>
+          </>
+        }
+        
+        
         </div>
       </div>
         
