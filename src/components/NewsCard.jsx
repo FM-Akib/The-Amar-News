@@ -15,7 +15,7 @@ const NewsCard = ({news}) => {
 	<div>
 		<img src={image_url} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 bg-gray-500" />
 		<h2 className="mb-1 text-xl font-semibold">{title}</h2>
-		<p className="text-sm text-gray-600">{details.length<200? details : details.slice(0,200)}...<Link to={_id} className="underline text-blue-600 font-bold">Read more</Link></p>
+		<p className="text-sm text-gray-600">{details.length<200? details : details.slice(0,200)}...<Link to={`/news/${_id}`} className="underline text-blue-600 font-bold">Read more</Link></p>
 	</div>
 	<div className="flex flex-wrap justify-between">
 		<div className="space-x-2">

@@ -5,6 +5,7 @@ import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import Privateroute from "./Privateroute";
 import Bookmark from "../Pages/Bookmark";
+import ANews from "../Pages/ANews";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home></Home>
+        },
+        {
+          path: "/news/:id",
+          element:  <ANews></ANews>,
+         
         },
         {
           path: "login",
