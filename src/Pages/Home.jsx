@@ -5,13 +5,14 @@ import LeftNav from "../Shared/LeftNav";
 import RightNav from "../Shared/RightNav";
 import { useContext } from "react";
 import { NewsContext } from "../components/Newsprovider";
+import NewsCard from "../components/NewsCard";
 
 const Home = () => {
     const {news}=useContext(NewsContext);
     console.log(news)
 
 
-    
+
     return (
         <div className="font-popin w-[1400px]  mx-auto">
         <Header/>
@@ -28,13 +29,24 @@ const Home = () => {
         <NavBar/>
 
         <div className="grid grid-cols-4">
-            <div className="col-span-1 p-10">
+
+            <div className="col-span-1 p-10 sticky top-0">
                 <LeftNav></LeftNav>
             </div>
-            <div className="col-span-2 p-10 bg-lime-500">2</div>
+
+            <div className="col-span-2 py-10 px-2 ">
+            {
+                news ? news.map(anews=> <NewsCard
+                key={anews._id}
+                news={anews}
+                ></NewsCard>):'Loading...'
+            }
+            </div>
+            
             <div className="col-span-1 p-10 ">
                 <RightNav></RightNav>
             </div>
+
         </div>
 
         </div>
