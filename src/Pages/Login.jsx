@@ -1,13 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/login.css';
 import { useContext } from 'react';
 import { AuthContext } from '../Authentication/Authprovider';
- 
+
 const Login = () => {
-   
+	const navigate= useNavigate();
     const {sinInWithGoogle,loginWithemailPass}= useContext(AuthContext)
+
+
     const handleGooglelogin=()=>{
         sinInWithGoogle();
+		navigate("/")
     }
     const handleLoginForm=(e)=>{
            e.preventDefault();
@@ -17,6 +20,7 @@ const Login = () => {
 		loginWithemailPass(email, pass)
 		.then(result=>{
 			console.log(result.user)
+			navigate(location?.state?location.state : '/');
 		})
 		.catch((error) => {
 			console.log(error)
