@@ -1,10 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Authentication/Authprovider";
 
 
 const NavBar = () => {
+
+  const {user}=useContext(AuthContext);
+  console.log(user);
+
+
+
   const [scrollPosition, setScrollPosition] = useState(0);
-  console.log(scrollPosition)
+  // console.log(scrollPosition)
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
