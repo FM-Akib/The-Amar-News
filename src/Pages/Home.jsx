@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="grid grid-cols-4">
 
-            <div className="col-span-1 p-10 sticky top-0">
+            <div className="col-span-1 p-10  ">
                 <LeftNav></LeftNav>
             </div>
 

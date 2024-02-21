@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LeftNav = () => {
     return (
-        <div className="font-semibold text-gray-600 ">
+        <div className="font-semibold text-gray-600 sticky top-12 ">
            <h1 className="text-2xl">All Category</h1>
           
             <ul className="">
