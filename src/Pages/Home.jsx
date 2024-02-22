@@ -9,7 +9,7 @@ import NewsCard from "../components/NewsCard";
 
 const Home = () => {
     const {news}=useContext(NewsContext);
-    // console.log(news)
+    //  console.log(news)
 
 
 
