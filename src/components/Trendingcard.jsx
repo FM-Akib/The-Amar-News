@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const Trendingcard = ({news}) => {
     const {title,thumbnail_url,_id} = news;
+
+	useEffect(() => {
+        AOS.init({duration:1000})
+    },[])
+
+
+
     return (
-    <div className="max-w-xs rounded-md shadow-md bg-gray-100 text-gray-800 mb-4">
+    <div className="max-w-xs rounded-md shadow-md bg-gray-100 text-gray-800 mb-4" data-aos="fade-right"
+	data-aos-offset="300"
+	data-aos-easing="ease-in-sine">
 	<img src={thumbnail_url} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
 	<div className="flex flex-col justify-between p-6 space-y-8">
 		<div className="space-y-2">

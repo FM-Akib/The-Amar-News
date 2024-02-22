@@ -1,10 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { NewsContext } from "../components/Newsprovider";
 import Header from "./Header";
 import RightNav from "../Shared/RightNav";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ANews = () => {
+    useEffect(() => {
+        AOS.init({duration:1000})
+    },[])
+    
     const {news} = useContext(NewsContext);
     //  console.log(news)
     const {id} = useParams();
@@ -18,10 +24,10 @@ const ANews = () => {
         <div className="font-popin w-[1400px]  mx-auto">
            <Header/>
             
-            <div className="grid grid-cols-4 mt-8">
+            <div className="grid grid-cols-4 mt-8" >
 
-                <div className="col-span-3  p-8">
-                <div className="max-w-5xl p-4 rounded-lg shadow-md bg-gray-50 text-gray-800">
+            <div className="col-span-3  p-8" data-aos="zoom-in-up">
+            <div className="max-w-5xl p-4 rounded-lg shadow-md bg-gray-50 text-gray-800">
 	<div className="flex justify-between pb-4 border-bottom">
 		<div className="flex items-center">
 			<a rel="noopener noreferrer" href="#" className="mb-0 capitalize text-gray-800">Total View - {total_view}</a>
@@ -46,9 +52,10 @@ const ANews = () => {
 
                 
                 </div>
-                <div className="col-span-1 p-8">
-                    <RightNav/>
 
+
+                <div className="col-span-1 p-8">
+                <RightNav/>
                 </div>
 
             </div>

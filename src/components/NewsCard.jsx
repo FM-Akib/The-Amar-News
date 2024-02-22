@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const NewsCard = ({news}) => {
     // console.log(news);
     const {author,title,image_url,details,_id,total_view}=news;
+    useEffect(() => {
+        AOS.init({duration:2000})
+    },[])
+
+
     return (
-        <div className="mb-4 flex flex-col  p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-50 text-gray-800">
+
+    <div className="mb-4 flex flex-col  p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-50 text-gray-800 " data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
 	<div className="flex space-x-4">
 		<img alt="" src={author.img} className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
 		<div className="flex flex-col space-y-1">
@@ -47,7 +55,7 @@ const NewsCard = ({news}) => {
 			</button>
 		</div>
 	</div>
-</div>
+    </div>
     );
 };
 
