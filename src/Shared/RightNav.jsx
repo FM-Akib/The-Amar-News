@@ -8,9 +8,16 @@ import { Link } from "react-router-dom";
 import q1 from '../assets/qZone1.png'; 
 import q2 from '../assets/qZone2.png'; 
 import q3 from '../assets/qZone3.png'; 
-import add1 from '../assets/advertise.png'; 
+import add1 from '../assets/advertise.png';
+
+import Lottie from 'lottie-react';
+import animationdata from '../assets/sports.json';
+// import { useRef } from "react";
+
 
 const RightNav = () => {
+
+    // const sportRef = useRef <LottieRefCurrentProps> (null)
     
     return (
         <div className="">
@@ -45,6 +52,14 @@ const RightNav = () => {
             <div className="mt-8">
                 <img src={add1}/>
             </div>
+
+            <div className="mt-8 border border-green-800 p-1 flex flex-col justify-center rounded-md">
+                <Lottie animationData={animationdata} />
+                <button className="mt-4 btn border-green-300 bg-green-200 ">Sports News</button>
+            </div>
+            
+
+
         </div>
     );
 };
