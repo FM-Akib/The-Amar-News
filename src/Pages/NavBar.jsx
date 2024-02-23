@@ -33,7 +33,7 @@ const NavBar = () => {
     </>
     return (
     
-        <div className={`${scrollPosition >= 262 ? 'bg-white rounded-md' : ''} navbar bg-base-100 font-roboto sticky top-0`} >
+        <div className={`${scrollPosition >= 262 ? 'bg-white rounded-md' : ''} z-10 navbar bg-base-100 font-roboto sticky top-0`} >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
