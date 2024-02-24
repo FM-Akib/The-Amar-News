@@ -38,7 +38,7 @@ const Home = () => {
             {
                 news ? news.map(anews=> <NewsCard
                 key={anews._id}
-                news={anews}
+                anews={anews}
                 ></NewsCard>):'Loading...'
             }
             </div>

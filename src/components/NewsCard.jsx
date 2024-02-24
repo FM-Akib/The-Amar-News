@@ -1,22 +1,40 @@
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
-import { AddToDB } from "../utilities/fakedb";
-const NewsCard = ({news}) => {
-    // console.log(news);
-    const {author,title,image_url,details,_id,total_view}=news;
+import { useContext, useEffect, useState } from "react";
+import { AddToDB, GetPreviousData } from "../utilities/fakedb";
+import { NewsContext } from "./Newsprovider";
+const NewsCard = ({anews}) => {
+    
+   const {news} = useContext (NewsContext)
+    // console.log(news)
+
+    const {author,title,image_url,details,_id,total_view}=anews;
     useEffect(() => {
         AOS.init({duration:2000})
     },[])
 
+   const [bookmark,setBookmark]=useState([])
 
    const handleBokkmarked = (id) => {
         console.log(id)
 		AddToDB(id);
    }
 
+  useEffect(() => {
+  const previousdata = GetPreviousData()
+  const previousBookmarked=[];
 
+          for(const id in previousdata){
+            const newsBM = news.find(b=>b._id===id);
+            if(newsBM){
+                previousBookmarked.push(newsBM);
+            }
+          }
+          setBookmark(previousBookmarked)
+  },[news])
+
+ console.log(bookmark)
 
     return (
 
