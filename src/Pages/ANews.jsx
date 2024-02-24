@@ -48,10 +48,8 @@ const ANews = () => {
 			<p className=" text-gray-800 text-xl leading-8 p-2">{details}</p>
 		</div>
 	</div>
-                </div>
-
-                
-                </div>
+        </div>                
+        </div>
 
 
                 <div className="col-span-1 p-8">
