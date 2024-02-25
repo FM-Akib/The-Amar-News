@@ -3,9 +3,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {  useEffect, useState } from "react";
 import { AddToDB } from "../utilities/fakedb";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const NewsCard = ({anews}) => {
     
-   
+	const notifyBookmarked = () => toast.success("News Bookmarked!!");
 
     const {author,title,image_url,details,_id,total_view}=anews;
 
@@ -18,11 +23,14 @@ const NewsCard = ({anews}) => {
    const handleBokkmarked = (id) => {
         // console.log(id)
 		AddToDB(id);
+		notifyBookmarked();
    }
 
  
 
     return (
+<>
+		<ToastContainer />
 
     <div className="mb-4 flex flex-col  p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-50 text-gray-800 " data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
 	<div className="flex space-x-4">
@@ -72,6 +80,7 @@ const NewsCard = ({anews}) => {
 		</div>
 	</div>
     </div>
+	</>
     );
 };
 
