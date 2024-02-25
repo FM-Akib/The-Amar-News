@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { NewsContext } from "../components/Newsprovider";
 import { GetPreviousData } from "../utilities/fakedb";
+import BookmarkCard from "../components/BookmarkCard";
 
 
 const Bookmark = () => {
@@ -21,12 +22,20 @@ const Bookmark = () => {
             setBookmark(previousBookmarked)
     },[news])
   
-   console.log(bookmark)
+//    console.log(bookmark.title)
+//    const {author,title,image_url,details,_id,total_view} = bookmark;
 
     return (
-        <div>
+       <div className="w-[1080px] mx-auto">
+        {/* <h1 className="text-center font-bold text-3xl">BookMarked : {bookmark.length}</h1> */}
+       {
+        bookmark.map(bookmarked=> <BookmarkCard
+        key={bookmarked._id}
+        bookmark={bookmarked}
+        ></BookmarkCard>)
+       }
 
-            <h1 className="text-center font-bold text-3xl">BookMarked : {bookmark.length}</h1>
+
             
         </div>
     )
