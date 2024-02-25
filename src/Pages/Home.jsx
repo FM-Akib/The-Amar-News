@@ -21,7 +21,7 @@ const Home = () => {
             <div className="bg-red-700 w-40 p-4 rounded-tl-lg rounded-bl-lg text-white justify-center flex text-center items-center ">
                 Breaking News
             </div>
-            <Marquee speed={150} className="bg-gray-200 rounded-br-lg rounded-tr-lg">
+            <Marquee speed={150} className="bg-blue-100 rounded-br-lg rounded-tr-lg">
             <p className="text-xl">I can be a React component, multiple React components, or just some text.</p>
             </Marquee>
         </div>

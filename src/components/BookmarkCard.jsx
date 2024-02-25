@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 const BookmarkCard = ({bookmark}) => {
-    const {author,title,image_url,details,_id,total_view} = bookmark;
+    const {author,title,image_url,details,_id,total_view,thumbnail_url} = bookmark;
     console.log(title)
     return (
-        <article className=" flex bg-yellow-300 my-10 transition hover:shadow-xl rounded-md">
+        <article className=" flex bg-blue-200 my-10 transition hover:shadow-xl rounded-md">
         <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
           <time
             dateTime = "2022-10-10"
@@ -18,7 +19,7 @@ const BookmarkCard = ({bookmark}) => {
         <div className="hidden sm:block sm:basis-56">
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+            src={thumbnail_url}
             className="aspect-square h-full w-full object-cover"
           />
         </div>
@@ -27,25 +28,21 @@ const BookmarkCard = ({bookmark}) => {
           <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
             <a href="#">
               <h3 className="font-bold uppercase text-gray-900">
-                jfdddddd
+               {title}
               </h3>
             </a>
       
             <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
-              pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-              quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius
-              atque dignissimos. Molestias explicabo corporis voluptatem?
+             {details}
             </p>
           </div>
       
-          <div className="sm:flex sm:items-end sm:justify-end">
-            <a
-              href="#"
-              className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+          <div className="sm:flex sm:items-end sm:justify-end ">
+            <Link to={`/news/${_id}`}
+              className="rounded-md block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
             >
               Read Blog
-            </a>
+            </Link>
           </div>
         </div>
       </article>
