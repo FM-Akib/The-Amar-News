@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { NewsContext } from "../components/Newsprovider";
 import { GetPreviousData } from "../utilities/fakedb";
 import BookmarkCard from "../components/BookmarkCard";
+import Header from "./Header";
 
 
 const Bookmark = () => {
@@ -26,18 +27,21 @@ const Bookmark = () => {
 //    const {author,title,image_url,details,_id,total_view} = bookmark;
 
     return (
+        <>
+        <Header></Header>
+     
        <div className="w-[1080px] mx-auto">
-        {/* <h1 className="text-center font-bold text-3xl">BookMarked : {bookmark.length}</h1> */}
+       <div className="w-full bg-amber-600 mt-8 p-2">
+            sd
+        </div>
        {
         bookmark.map(bookmarked=> <BookmarkCard
         key={bookmarked._id}
         bookmark={bookmarked}
         ></BookmarkCard>)
-       }
-
-
-            
+       }   
         </div>
+        </>
     )
 };
 
