@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { NewsContext } from "../components/Newsprovider";
-import { GetPreviousData } from "../utilities/fakedb";
+import { DeleteAllBookmarked, GetPreviousData } from "../utilities/fakedb";
 import BookmarkCard from "../components/BookmarkCard";
 import Header from "./Header";
 
 
 const Bookmark = () => {
     const {news} = useContext (NewsContext)
-    // console.log(news)
    const [bookmark,setBookmark]=useState([])
 
    useEffect(() => {
@@ -23,9 +22,10 @@ const Bookmark = () => {
             setBookmark(previousBookmarked)
     },[news])
   
-//    console.log(bookmark.title)
-//    const {author,title,image_url,details,_id,total_view} = bookmark;
-
+    const ClearBookmarked = () => {
+        DeleteAllBookmarked();
+        setBookmark([]);
+    }
     return (
         <>
         <Header></Header>
@@ -56,7 +56,7 @@ const Bookmark = () => {
        </div>
 
 
-        <button className="items-center flex font-bold text-xl">
+        <button onClick={ClearBookmarked} className="items-center flex font-bold text-xl">
        <lord-icon
         src="https://cdn.lordicon.com/skkahier.json"
         trigger="hover"
@@ -70,7 +70,8 @@ const Bookmark = () => {
         key={bookmarked._id}
         bookmark={bookmarked}
         ></BookmarkCard>)
-       }   
+       } 
+         
         </div>
         </>
     )

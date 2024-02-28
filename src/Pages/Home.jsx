@@ -18,11 +18,11 @@ const Home = () => {
         <Header/>
         
         <div className="w-[1400px] mx-auto flex my-8">
-            <div className="bg-red-700 w-40 p-4 rounded-tl-lg rounded-bl-lg text-white justify-center flex text-center items-center ">
+            <div className="bg-red-700 w-40 p-4 rounded-tl-lg rounded-bl-lg text-white justify-center flex text-center items-center font-bold ">
                 Breaking News
             </div>
-            <Marquee speed={150} className="bg-blue-100 rounded-br-lg rounded-tr-lg">
-            <p className="text-xl">I can be a React component, multiple React components, or just some text.</p>
+            <Marquee speed={150} className="bg-red-50 shadow-inner rounded-br-lg rounded-tr-lg ">
+            <p className="text-xl ">I can be a React component, multiple React components, or just some text.           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et accusamus impedit accusantium veniam nostrum, modi laudantium autem. Corporis, ullam?</p>
             </Marquee>
         </div>
 

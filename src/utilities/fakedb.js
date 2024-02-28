@@ -29,12 +29,15 @@ const GetPreviousTime = () => {
   return previousTime;
 };
 
-
+const DeleteAllBookmarked=()=>{
+  localStorage.removeItem("bookmaredNews")
+}
 
 
 export {
     AddToDB,
     GetPreviousData,
     AddToTimeDB,
-    GetPreviousTime
+    GetPreviousTime,
+    DeleteAllBookmarked
 }
