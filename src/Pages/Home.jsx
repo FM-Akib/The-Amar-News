@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { NewsContext } from "../components/Newsprovider";
 import NewsCard from "../components/NewsCard";
 
+
 const Home = () => {
     const {news}=useContext(NewsContext);
     //  console.log(news)
@@ -27,6 +28,7 @@ const Home = () => {
         </div>
 
         <NavBar/>
+        
 
         <div className="grid grid-cols-4">
 
