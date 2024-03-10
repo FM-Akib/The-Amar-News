@@ -6,6 +6,7 @@ import Signup from "../Pages/Signup";
 import Privateroute from "./Privateroute";
 import Bookmark from "../Pages/Bookmark";
 import ANews from "../Pages/ANews";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         {
           path: "bookmark",
           element: <Privateroute><Bookmark></Bookmark></Privateroute>
+        },
+        {
+          path: "about",
+          element: <About></About>
         }
     ]
     },

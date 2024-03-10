@@ -8,6 +8,7 @@ import { NewsContext } from "../components/Newsprovider";
 import NewsCard from "../components/NewsCard";
 
 
+
 const Home = () => {
     const {news}=useContext(NewsContext);
     //  console.log(news)
@@ -50,6 +51,8 @@ const Home = () => {
             </div>
 
         </div>
+
+
 
         </div>
     );
