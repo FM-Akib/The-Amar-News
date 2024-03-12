@@ -36,8 +36,8 @@ body {
 }
 
 .swiper {
-  width: 240px;
-  height: 320px;
+  width: 448px;
+  /* height: 220px; */
 }
 
 .swiper-slide {
@@ -45,11 +45,11 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
+  /* font-size: 22px; */
+  /* font-weight: bold; */
+  /* color: #fff; */
 }
-
+/* 
 .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }
@@ -88,4 +88,37 @@ body {
 
 .swiper-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
-}
+} */
+@media only screen and (max-width: 600px) {
+    .swiper{
+        width: 300px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .swiper{
+        width: 380px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .swiper{
+        width: 400px;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .swiper{
+        width: 440px;
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .swiper{
+        width: 448px;
+    }
+  }

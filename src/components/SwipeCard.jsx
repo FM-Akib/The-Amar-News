@@ -10,25 +10,26 @@ import 'swiper/css/effect-cards';
 
 // import required modules
 import { EffectCards } from 'swiper/modules';
+import BlogCard from './BlogCard';
 
 const SwipeCard = () => {
     return (
-        <div>
+        <div className="w-md h-48">
             <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><BlogCard/> </SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
+        <SwiperSlide><BlogCard/></SwiperSlide>
       </Swiper>  
         </div>
     );
