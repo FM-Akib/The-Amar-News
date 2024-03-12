@@ -1,12 +1,12 @@
+import NabMaterialUI from "../components/NabMaterialUI";
 import SwipeCard from "../components/SwipeCard";
 import Header from "./Header";
-import NavBar from "./NavBar";
 
 const About = () => {
   return (
     <div>
       <Header/>
-      <NavBar/>
+     <NabMaterialUI/>
       
       <h1>Implement siper effect</h1>
 
