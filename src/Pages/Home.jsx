@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { NewsContext } from "../components/Newsprovider";
 import NewsCard from "../components/NewsCard";
 
-
+import '../App.css';
 
 const Home = () => {
     const {news}=useContext(NewsContext);
@@ -23,8 +23,8 @@ const Home = () => {
             <div className="bg-red-700 w-40 p-4 rounded-tl-lg rounded-bl-lg text-white justify-center flex text-center items-center font-bold ">
                 Breaking News
             </div>
-            <Marquee speed={150} className="bg-red-50 shadow-inner rounded-br-lg rounded-tr-lg ">
-            <p className="text-xl ">I can be a React component, multiple React components, or just some text.           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et accusamus impedit accusantium veniam nostrum, modi laudantium autem. Corporis, ullam?</p>
+            <Marquee speed={100} className="bg-red-50 shadow-inner rounded-br-lg rounded-tr-lg ">
+            <p className="text-xl  ">I can be a React component, multiple React components, or just some text.           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et accusamus impedit accusantium veniam nostrum, modi laudantium autem. Corporis, ullam?</p>
             </Marquee>
         </div>
 
